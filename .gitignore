@@ -7,3 +7,5 @@
 # persitence files
 persistence.xml
 
+/bin/
+/target/
