@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 @Table(name="cars")
 
@@ -26,6 +28,7 @@ public class Cars {
 	@Column(name="COLOR")
 	private String color;
 	@Column(name="ManufactureDate")
+	@Temporal(TemporalType.DATE)
 	private Date manufactureDate;
 	
 	//default constructor
