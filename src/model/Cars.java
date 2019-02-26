@@ -8,6 +8,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
 @Table(name="cars")
 
@@ -26,11 +28,20 @@ public class Cars {
 	@Column(name="COLOR")
 	private String color;
 	@Column(name="ManufactureDate")
+	@Temporal(TemporalType.DATE)
 	private Date manufactureDate;
 	
 	//default constructor
 	public Cars() {
 		super();
+	}
+	
+	public Cars(String make, String model, String year, String color, Date manufactureDate) {
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.color = color;
+		this.manufactureDate = manufactureDate;
 	}
 	
 	//getters and setters
@@ -53,7 +64,7 @@ public class Cars {
 	private void setModel(String model) {
 		this.model = model;
 	}
-	private String getModel() {
+	public String getModel() {
 		return this.model;
 	}
 
@@ -80,7 +91,7 @@ public class Cars {
 	private void setManufactureDate(Date manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
-
+	//to String
 	@Override
 	public String toString() {
 		return "Cars [carID=" + carID + ", make=" + make + ", model=" + model + ", year=" + year + ", color=" + color
