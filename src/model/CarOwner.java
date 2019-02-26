@@ -24,6 +24,19 @@ public class CarOwner {
 	private Date purchaseDate;
 	@Column(name="carID")
 	private int CarID;
+	
+	//constructors
+	public CarOwner() {
+		super();
+	}
+	
+	public CarOwner(String ownerName,String phoneNumber, Date purchaseDate, int carID) {
+		this.ownerName = ownerName;
+		this.phoneNumber = phoneNumber;
+		this.purchaseDate = purchaseDate;
+		this.CarID = carID;
+	}
+	
 	//getters and setters
 	private int getOwnerID() {
 		return ownerID;
@@ -55,6 +68,7 @@ public class CarOwner {
 	private void setCarID(int carID) {
 		CarID = carID;
 	}
+	//To String
 	@Override
 	public String toString() {
 		return "CarOwner [ownerID=" + ownerID + ", ownerName=" + ownerName + ", phoneNumber=" + phoneNumber

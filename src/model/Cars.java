@@ -33,6 +33,14 @@ public class Cars {
 		super();
 	}
 	
+	public Cars(String make, String model, String year, String color, Date manufactureDate) {
+		this.make = make;
+		this.model = model;
+		this.year = year;
+		this.color = color;
+		this.manufactureDate = manufactureDate;
+	}
+	
 	//getters and setters
 	private int getCarID() {
 		return this.carID;
@@ -53,7 +61,7 @@ public class Cars {
 	private void setModel(String model) {
 		this.model = model;
 	}
-	private String getModel() {
+	public String getModel() {
 		return this.model;
 	}
 
@@ -80,7 +88,7 @@ public class Cars {
 	private void setManufactureDate(Date manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
-
+	//to String
 	@Override
 	public String toString() {
 		return "Cars [carID=" + carID + ", make=" + make + ", model=" + model + ", year=" + year + ", color=" + color
