@@ -45,50 +45,50 @@ public class Cars {
 	}
 	
 	//getters and setters
-	private int getCarID() {
+	public int getCarID() {
 		return this.carID;
 	}
 	
-	private void setCarID(int carID) {
+	public void setCarID(int carID) {
 		this.carID = carID;
 	}
 	
-	private String getMake() {
+	public String getMake() {
 		return this.make;
 	}
 	
-	private void setMake(String make) {
+	public void setMake(String make) {
 		this.make = make;
 	}
 	
-	private void setModel(String model) {
+	public void setModel(String model) {
 		this.model = model;
 	}
 	public String getModel() {
 		return this.model;
 	}
 
-	private String getYear() {
+	public String getYear() {
 		return year;
 	}
 
-	private void setYear(String year) {
+	public void setYear(String year) {
 		this.year = year;
 	}
 
-	private String getColor() {
+	public String getColor() {
 		return color;
 	}
 
-	private void setColor(String color) {
+	public void setColor(String color) {
 		this.color = color;
 	}
 
-	private Date getManufactureDate() {
+	public Date getManufactureDate() {
 		return manufactureDate;
 	}
 
-	private void setManufactureDate(Date manufactureDate) {
+	public void setManufactureDate(Date manufactureDate) {
 		this.manufactureDate = manufactureDate;
 	}
 	//to String

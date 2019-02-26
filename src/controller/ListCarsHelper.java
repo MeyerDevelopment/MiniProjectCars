@@ -27,7 +27,7 @@ public class ListCarsHelper {
 	public void deleteCars(Cars toDelete) {
 		EntityManager	em	=	emfactory.createEntityManager();
 		em.getTransaction().begin();
-		TypedQuery<Cars> typedQuery	= em.createQuery("select li from Cars li where li.item = :selectedItem",Cars.class);
+		TypedQuery<Cars> typedQuery	= em.createQuery("select li from Cars li where li.model = :selectedItem",Cars.class);
 		//Substitute	parameter	with	actual	data	from	the	toDelete	item
 		//typedQuery.setParameter("selectedQuantity",	toDelete.getQuantity());
 		typedQuery.setParameter("selectedItem",	toDelete.getModel());
