@@ -9,14 +9,18 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 @Entity
-@Table(name = "cars")
+@Table(name="cars")
+
 
 public class Cars {
-
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "carID")
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="carID")
 	private int carID;
 	@Column(name="MAKE")
 	private String make;
@@ -26,7 +30,8 @@ public class Cars {
 	private String year;
 	@Column(name = "COLOR")
 	private String color;
-	@Column(name = "ManufactureDate")
+	@Column(name="ManufactureDate")
+	@Temporal(TemporalType.DATE)
 	private Date manufactureDate;
 	
 	//default constructor
@@ -36,7 +41,7 @@ public class Cars {
 	
 	//full variable constructor
 	public Cars(String make, String model, String year, String color, Date manufactureDate) {
-		this.make=make;
+		this.make = make;
 		this.model = model;
 		this.year = year;
 		this.color = color;
@@ -44,19 +49,19 @@ public class Cars {
 	}
 	
 	//getters and setters
-	private int getCarID() {
+	public int getCarID() {
 		return this.carID;
 	}
 	
-	private void setID(int carID) {
+	public void setCarID(int carID) {
 		this.carID = carID;
 	}
 	
-	private String getCarMake() {
+	public String getMake() {
 		return this.make;
 	}
 	
-	private void setCarMake(String make) {
+	public void setMake(String make) {
 		this.make = make;
 	}
 	
@@ -64,7 +69,7 @@ public class Cars {
 		return this.model;
 	}
 	
-	private void setCarModel() {
+	private void setCarModel(String model) {
 		this.model = model;
 	}
 	
@@ -83,5 +88,40 @@ public class Cars {
 	private void setCarColor(String color) {
 		this.color = color;
 	}
-	
+	public void setModel(String model) {
+		this.model = model;
+	}
+	public String getModel() {
+		return this.model;
+	}
+
+	public String getYear() {
+		return year;
+	}
+
+	public void setYear(String year) {
+		this.year = year;
+	}
+
+	public String getColor() {
+		return color;
+	}
+
+	public void setColor(String color) {
+		this.color = color;
+	}
+
+	public Date getManufactureDate() {
+		return manufactureDate;
+	}
+
+	public void setManufactureDate(Date manufactureDate) {
+		this.manufactureDate = manufactureDate;
+	}
+	//to String
+	@Override
+	public String toString() {
+		return "Cars [carID=" + carID + ", make=" + make + ", model=" + model + ", year=" + year + ", color=" + color
+				+ ", manufactureDate=" + manufactureDate + "]";
+	}
 }
