@@ -51,9 +51,18 @@ public class navigationServlet extends HttpServlet {
 			} catch (NumberFormatException e) {
 				System.out.println("Forgot to click a button");
 			} finally {
-			getServletContext().getRequestDispatcher("/viewAllItemsServlet").forward(request, response);
+			getServletContext().getRequestDispatcher("/viewAllCarsServlet").forward(request, response);
 			}
 		} else if (act.equals("edit")) {
+			try {
+				Integer tempId = Integer.parseInt(request.getParameter("id"));
+				Cars itemToEdit = dao.searchForCarsById(tempId);
+				request.setAttribute("itemToEdit", itemToEdit);
+				getServletContext().getRequestDispatcher("/editCar.jsp").forward(request, response);
+			} catch (NumberFormatException e) {
+				getServletContext().getRequestDispatcher("/viewAllCarsServlet").
+				forward(request, response);
+			}
 		} else if (act.equals("add")) {
 		getServletContext().getRequestDispatcher("/index.html").forward(request, response);
 		}		

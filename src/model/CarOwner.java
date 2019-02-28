@@ -40,35 +40,41 @@ public class CarOwner {
 		this.CarID = carID;
 	}
 	
-	//getters and setters
-	private int getOwnerID() {
-		return ownerID;
-	}
-	private void setOwnerID(int ownerID) {
-		this.ownerID = ownerID;
-	}
-	private String getOwnerName() {
-		return ownerName;
-	}
-	private void setOwnerName(String ownerName) {
+	public CarOwner(String ownerName, String phoneNumber, Date purchaseDate) {
 		this.ownerName = ownerName;
-	}
-	private String getPhoneNumber() {
-		return phoneNumber;
-	}
-	private void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
-	}
-	private Date getPurchaseDate() {
-		return purchaseDate;
-	}
-	private void setPurchaseDate(Date purchaseDate) {
 		this.purchaseDate = purchaseDate;
 	}
-	private int getCarID() {
+	
+	//getters and setters
+	public int getOwnerID() {
+		return ownerID;
+	}
+	public void setOwnerID(int ownerID) {
+		this.ownerID = ownerID;
+	}
+	public String getOwnerName() {
+		return ownerName;
+	}
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+	public String getPhoneNumber() {
+		return phoneNumber;
+	}
+	public void setPhoneNumber(String phoneNumber) {
+		this.phoneNumber = phoneNumber;
+	}
+	public Date getPurchaseDate() {
+		return purchaseDate;
+	}
+	public void setPurchaseDate(Date purchaseDate) {
+		this.purchaseDate = purchaseDate;
+	}
+	public int getCarID() {
 		return CarID;
 	}
-	private void setCarID(int carID) {
+	public void setCarID(int carID) {
 		CarID = carID;
 	}
 	//To String
