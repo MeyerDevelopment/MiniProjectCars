@@ -31,7 +31,7 @@ CREATE TABLE `car_owner` (
   PRIMARY KEY (`ownerID`),
   KEY `carID` (`carID`),
   CONSTRAINT `car_owner_ibfk_1` FOREIGN KEY (`carID`) REFERENCES `cars` (`carid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -58,7 +58,7 @@ CREATE TABLE `cars` (
   `COLOR` varchar(20) DEFAULT NULL,
   `ManufactureDate` date DEFAULT NULL,
   PRIMARY KEY (`carID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,16 +67,9 @@ CREATE TABLE `cars` (
 
 LOCK TABLES `cars` WRITE;
 /*!40000 ALTER TABLE `cars` DISABLE KEYS */;
+INSERT INTO `cars` VALUES (5,'Dodge','Ram 1500','2014','Blue','2014-07-23'),(7,'Hyndai','Tuscon','2013','Yellow','2013-09-18');
 /*!40000 ALTER TABLE `cars` ENABLE KEYS */;
 UNLOCK TABLES;
-
---
--- Dumping events for database 'cars'
---
-
---
--- Dumping routines for database 'cars'
---
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -87,4 +80,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-02-25  8:45:14
+-- Dump completed on 2019-02-27 21:59:20
